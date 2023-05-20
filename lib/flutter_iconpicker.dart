@@ -11,13 +11,12 @@ export 'Serialization/iconDataSerialization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconpicker/controllers/icon_controller.dart';
 import 'Dialogs/DefaultDialog.dart';
-import 'IconPicker/searchBar.dart';
+import 'IconPicker/searchBar.dart' as searchbar;
 import 'Models/IconPack.dart';
 
 class FlutterIconPicker {
   static Future<IconData?> showIconPicker(
     BuildContext context, {
-
     /// Defines if the searchbar will be
     /// shown above the icons
     bool showSearchBar = true,
@@ -71,7 +70,7 @@ class FlutterIconPicker {
     BoxConstraints? constraints,
 
     /// The title for the Picker.
-    /// Sits above the [SearchBar] and [Icons].
+    /// Sits above the [searchbar.SearchBar] and [Icons].
     /// Defaults to:
     /// ```dart
     ///   const Text('Pick an icon')
